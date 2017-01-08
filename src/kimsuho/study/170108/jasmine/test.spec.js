@@ -1,26 +1,25 @@
-function min(a, b, c, d) {
-	var m = a;
+var math = {
+	min: function(a,b,c,d) {
+		var m = a;
 
-	if(m > b) m = b;
-	if(m > c) m = c;
-	if(m > d) m = d;
+		if(m > b) m = b;
+		if(m > c) m = c;
+		if(m > d) m = d;
 
-	return m;
-}
-function max(a, b){
-	return a > b ? a : b;
-}
+		return m;
+	},
+	max: function(a,b){
+		return a > b ? a : b;
+	}
+};
 
-describe('min 테스트', function() {
-	it('가장 작은 수를 반환한다', function() {
-		expect(min(5,10,3,19)).toBe(3);
-		expect(min(20,7,1,3)).toBe(1);
+describe('math테스트', function() {
+	it('min은 가장 작은 수를 반환한다', function() {
+		expect(math.min(5,10,3,19)).toBe(3);
+		expect(math.min(20,7,1,3)).toBe(1);
 	});
-
-});
-describe('max 테스트', function() {
-	it('가장 큰 수를 반환한다', function() {
-		expect(max(5, 11)).toBe(11);
-		expect(max(21, 4)).toBe(21);
+	it('max는 가장 큰 수를 반환한다', function() {
+		expect(math.max(5, 11)).toBe(11);
+		expect(math.max(21, 4)).toBe(21);
 	});
 });
