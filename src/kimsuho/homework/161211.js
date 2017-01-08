@@ -29,25 +29,5 @@ function hour(time) {
 	if(18 <= time && time < 21) return '저녁';
 	return '늦었어요';
 }
-function sum(a, b, c) {
-
-	return a + b + c;
-}
-
-
-var age = 32;
-var height = 182;
-
-
-var suho = {
-	age: 32,
-	height: 182,
-	energy: 10,
-	run: function(){
-		this.energy = this.energy - 1;
-		return '달려';
-	}
-};
-
 
 
